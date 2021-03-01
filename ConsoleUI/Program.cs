@@ -9,9 +9,8 @@ namespace ConsoleUI
         static void Main(string[] args)
         {
             // Data Transformation Objects
-            // ProductTest();
+            ProductTest();
             // IoC
-            // CategoryTest();
         }
 
         private static void CategoryTest()
@@ -29,7 +28,7 @@ namespace ConsoleUI
 
             foreach (var product in productManager.GetProductDetails())
             {
-                Console.WriteLine(product.ProductName + "/" + product.CategoryName);
+                Console.WriteLine(product.ProductName + " / " + product.CategoryName);
             }
         }
     }
