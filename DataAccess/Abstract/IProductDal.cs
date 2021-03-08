@@ -13,4 +13,4 @@ namespace DataAccess.Abstract
     }
 }
 
-// Code Refactoring - Kodun İyileştirilmesi
+//Code Refactoring -- Kodun İyileştirilmesi

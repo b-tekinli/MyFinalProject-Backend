@@ -15,21 +15,21 @@ namespace WebAPI.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        // Loosely coupled -- gevşek bağımlılık
-        // Naming convention -- adlandırma kuralı
-        // IoC Container -- Inversion of Control -- kontrolün ters çevrilmesi
+        //Loosely coupled
+        //naming convention
+        //IoC Container -- Inversion of Control
         IProductService _productService;
 
-        public ProductsController(IProductService productservice)
+        public ProductsController(IProductService productService)
         {
-            _productService = productservice;
+            _productService = productService;
         }
 
         [HttpGet("getall")]
-        public IActionResult Get()
+        public IActionResult GetAll()
         {
-            // Swagger
-            // Dependency chain -- bağımlılık zinciri
+            //Swagger
+            //Dependency chain --
             var result = _productService.GetAll();
             if (result.Success)
             {
@@ -61,5 +61,7 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
+
+
     }
 }
